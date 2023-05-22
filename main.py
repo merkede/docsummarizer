@@ -17,15 +17,15 @@ def main():
 
     :return: None.
     """
-    st.title("Document Summarizer")
+    st.title("Document Summariser")
 
     input_method = st.radio("Select the type of file you would like summmarised", ('Upload a document', 'Enter a YouTube URL'))
 
     if input_method == 'Upload a document':
-        uploaded_file = st.file_uploader("Upload a document to summarize, try and keep it short!", type=['txt', 'pdf'])
+        uploaded_file = st.file_uploader("Upload a document to summarise, try and keep it short!", type=['txt', 'pdf'])
 
     if input_method == 'Enter a YouTube URL':
-        youtube_url = st.text_input("Enter a YouTube URL to summarize")
+        youtube_url = st.text_input("Enter a YouTube URL to summarise")
 
     api_key = st.text_input("Enter API key here")
 #   st.markdown('[Author email](mailto:ethanujohnston@gmail.com)')
@@ -35,7 +35,7 @@ def main():
     st.sidebar.markdown("""<small> This is open-source using GPT-4 under the hood. Expose your data at your own risk! .</small>""", unsafe_allow_html=True)
 
 
-    if st.button('Summarize (only click me once ... please)'):
+    if st.button('Summarise (only click me once ... please)'):
         if input_method == 'Upload a document':
             process_summarize_button(uploaded_file, api_key, use_gpt_4, find_clusters)
 
@@ -46,7 +46,7 @@ def main():
 
 def process_summarize_button(file_or_transcript, api_key, use_gpt_4, find_clusters, file=True):
     """
-    Processes the summarize button, and displays the summary if input and doc size are valid
+    Processes the summarise button, and displays the summary if input and doc size are valid
 
     :param file_or_transcript: The file uploaded by the user or the transcript from the YouTube URL
 
@@ -61,7 +61,7 @@ def process_summarize_button(file_or_transcript, api_key, use_gpt_4, find_cluste
     if not validate_input(file_or_transcript, api_key, use_gpt_4):
         return
 
-    with st.spinner("Summarizing... please wait..."):
+    with st.spinner("Summarising... patience is a virtue..."):
         if file:
             temp_file_path = create_temp_file(file_or_transcript)
             doc = doc_loader(temp_file_path)
