@@ -19,16 +19,16 @@ def main():
     """
     st.title("Document Summarizer")
 
-    input_method = st.radio("Select input method", ('Upload a document', 'Enter a YouTube URL'))
+    input_method = st.radio("Select the type of file you would like summmarised", ('Upload a document', 'Enter a YouTube URL'))
 
     if input_method == 'Upload a document':
-        uploaded_file = st.file_uploader("Upload a document to summarize, 10k to 100k tokens works best!", type=['txt', 'pdf'])
+        uploaded_file = st.file_uploader("Upload a document to summarize, try and keep it short!", type=['txt', 'pdf'])
 
     if input_method == 'Enter a YouTube URL':
         youtube_url = st.text_input("Enter a YouTube URL to summarize")
 
-    api_key = st.text_input("Enter API key here, or contact the author if you don't have one.")
-    st.markdown('[Author email](mailto:ethanujohnston@gmail.com)')
+    api_key = st.text_input("Enter API key here")
+#   st.markdown('[Author email](mailto:ethanujohnston@gmail.com)')
     use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=True)
     find_clusters = st.checkbox('Run with optimal clusters - optimised ', value=False)
     st.sidebar.markdown('# HAMZAH JAVAID')
