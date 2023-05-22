@@ -17,7 +17,7 @@ def main():
 
     :return: None.
     """
-    st.title("Document Summariser")
+    st.title("Summarise with Hamzah")
 
     input_method = st.radio("Select the type of file you would like summmarised", ('Upload a document', 'Enter a YouTube URL'))
 
