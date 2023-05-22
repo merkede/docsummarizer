@@ -30,11 +30,9 @@ def main():
     api_key = st.text_input("Enter API key here, or contact the author if you don't have one.")
     st.markdown('[Author email](mailto:ethanujohnston@gmail.com)')
     use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=True)
-    find_clusters = st.checkbox('Find optimal clusters (experimental, could save on token usage)', value=False)
-    st.sidebar.markdown('# Made by: [Ethan](https://github.com/e-johnstonn)')
-    st.sidebar.markdown('# Git link: [Docsummarizer](https://github.com/e-johnstonn/docsummarizer)')
-    st.sidebar.markdown("""<small>It's always good practice to verify that a website is safe before giving it your API key. 
-                        This site is open source, so you can check the code yourself, or run the streamlit app locally.</small>""", unsafe_allow_html=True)
+    find_clusters = st.checkbox('Run with optimal clusters - optimised ', value=False)
+    st.sidebar.markdown('# HAMZAH JAVAID')
+    st.sidebar.markdown("""<small> This is open-source using GPT-4 under the hood. Expose your data at your own risk! .</small>""", unsafe_allow_html=True)
 
 
     if st.button('Summarize (click once and wait)'):
