@@ -35,7 +35,7 @@ def main():
     st.sidebar.markdown("""<small> This is open-source using GPT-4 under the hood. Expose your data at your own risk! .</small>""", unsafe_allow_html=True)
 
 
-    if st.button('Summarize (click once and wait)'):
+    if st.button('Summarize (only click me once ... please)'):
         if input_method == 'Upload a document':
             process_summarize_button(uploaded_file, api_key, use_gpt_4, find_clusters)
 
