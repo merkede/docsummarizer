@@ -29,7 +29,7 @@ def main():
 
     api_key = st.text_input("Enter API key here")
 #   st.markdown('[Author email](mailto:ethanujohnston@gmail.com)')
-    use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=True)
+    use_gpt_4 = st.checkbox("Use GPT-4 - currently most advanced model", value=True)
     find_clusters = st.checkbox('Run with optimal clusters - optimised ', value=False)
     st.sidebar.markdown('# HAMZAH JAVAID')
     st.sidebar.markdown("""<small> This is open-source using GPT-4 under the hood. Expose your data at your own risk! .</small>""", unsafe_allow_html=True)
